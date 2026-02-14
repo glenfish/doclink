@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>DOCl.ink</title>
+  <meta name="description" content="The search is over." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    :root{
+      --bg:#fafafa;
+      --fg:#111;
+      --sub:#666;
+    }
+    @media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0f11;
+    --fg: #e6e6e6;
+    --sub: #c3c3c3;
+  }
+}
+
+    html,body{
+      height:100%;
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                   "Liberation Mono", "Courier New", monospace;
+    }
+    .wrap{
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:24px;
+    }
+    .brand{
+      animation: fadeIn 480ms ease-out both;
+    }
+    .brand h1{
+      margin:0;
+      font-size: clamp(26px, 4vw, 40px);
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+    .brand h1 .dot {
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+    }
+    .brand p{
+      margin: 18px 0 0;
+      font-size: 15px;
+      color: var(--sub);
+      letter-spacing: 0.02em;
+    }
+    @keyframes fadeIn{
+      from{opacity:0; transform: translateY(6px);}
+      to{opacity:1; transform: translateY(0);}
+    }
+    .blue {
+        color: rgb(18, 110, 186);
+    }
+    .left-pad {
+        padding-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="brand" aria-label="DOCl.ink">
+      <h1><span class="blue">DOC</span>l<span class="dot blue">.</span>ink</h1>
+      <p class="left-pad">Provenance for your AI</p>
+    </section>
+  </main>
+</body>
+</html>
